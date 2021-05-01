@@ -2,15 +2,14 @@
 //  GroupTableViewCell.swift
 //  SocialApp
 //
-//  Created by Anna on 10.10.2020.
+//  Created by Anna on 01.05.2021.
 //
 
 import UIKit
 
 class GroupTableViewCell: UITableViewCell {
 
-
-    @IBOutlet weak var avatarView: CustomAvatar!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {

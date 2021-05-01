@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import LocalAuthentication
 
 class LoginFormViewController: UIViewController {
     
@@ -24,26 +23,6 @@ class LoginFormViewController: UIViewController {
         
         loginInput.delegate = self
         passwordInput.delegate = self
-        
-        authenticateUserTouchID()
-    }
-    
-    func authenticateUserTouchID() {
-        let context = LAContext()
-                
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Используйте Touch ID / Face ID для входа") { (success, error) in
-                if success {
-                    DispatchQueue.main.async {
-                        print("успешная авторизация")
-                        self.performSegue(withIdentifier: "goNext", sender: self)
-                    }
-                } else {
-                    guard let error = error else { return }
-                    print(error.localizedDescription)
-                }
-            }
-        }
     }
     
     @IBAction func loginButtonPress(_ sender: Any) {

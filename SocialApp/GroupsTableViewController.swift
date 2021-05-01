@@ -2,7 +2,7 @@
 //  GroupsTableViewController.swift
 //  SocialApp
 //
-//  Created by Anna on 10.10.2020.
+//  Created by Anna on 01.05.2021.
 //
 
 import UIKit
@@ -47,7 +47,7 @@ class GroupsTableViewController: UITableViewController {
 
         if let cell = cell as? GroupTableViewCell {
             let group = groups[indexPath.row]
-            cell.avatarView.imageView.image = group.image
+            cell.avatarImageView.image = group.image
             cell.nameLabel.text = group.name
         }
 
