@@ -47,7 +47,7 @@ class GroupsTableViewController: UITableViewController {
 
         if let cell = cell as? GroupTableViewCell {
             let group = groups[indexPath.row]
-            cell.avatarImageView.image = group.image
+            cell.avatarView.imageView.image = group.image
             cell.nameLabel.text = group.name
         }
 

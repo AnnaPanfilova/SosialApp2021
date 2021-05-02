@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478A2F2535D41B00709F5E /* CustomAvatar.swift */; };
 		957C9FF82531BEBC00B68AAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957C9FF72531BEBC00B68AAF /* User.swift */; };
 		957C9FFB2531BECB00B68AAF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957C9FFA2531BECB00B68AAF /* Group.swift */; };
 		957C9FFE2531BF9C00B68AAF /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95478A2F2535D41B00709F5E /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
 		957C9FF72531BEBC00B68AAF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		957C9FFA2531BECB00B68AAF /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				957CA0112531C9EB00B68AAF /* GroupSearchTableViewCell.swift */,
 				957CA0142531CB0600B68AAF /* PhotoCollectionViewCell.swift */,
 				957CA0172531CEBB00B68AAF /* GroupsSerachTableViewController.swift */,
+				95478A2F2535D41B00709F5E /* CustomAvatar.swift */,
 			);
 			path = SocialApp;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				95D1ADC725238B6200464727 /* SceneDelegate.swift in Sources */,
 				957CA0042531C06A00B68AAF /* PhotosCollectionViewController.swift in Sources */,
 				957CA00F2531C97400B68AAF /* GroupTableViewCell.swift in Sources */,
+				95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
