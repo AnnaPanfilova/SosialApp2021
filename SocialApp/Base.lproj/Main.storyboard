@@ -254,18 +254,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="THq-DF-3q3">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Search Groups" id="WSf-94-XZN">
-                                <connections>
-                                    <segue destination="97Y-6g-qJM" kind="show" identifier="goSearchGroup" id="eww-rH-sPA"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="add" id="Tqc-q1-srn">
-                                <connections>
-                                    <action selector="addButtonAction:" destination="Yyh-gJ-0He" id="p3O-Bf-vEJ"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tqc-q1-srn">
+                            <connections>
+                                <segue destination="97Y-6g-qJM" kind="show" id="FSz-Ah-lds"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tuo-9d-0jy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,6 +306,7 @@
                                 <connections>
                                     <outlet property="avatarImageView" destination="k8P-DV-joO" id="p5Q-3K-asI"/>
                                     <outlet property="nameLabel" destination="wso-3G-7uF" id="P6m-sy-qBl"/>
+                                    <segue destination="RcI-wG-EGN" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="RiW-WW-qZf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -324,6 +318,7 @@
                     <navigationItem key="navigationItem" id="wMd-ZZ-MtV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtk-Jh-ez2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RcI-wG-EGN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3867" y="467"/>
         </scene>
