@@ -130,6 +130,12 @@ class FriendsTableViewController: UITableViewController {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return sections
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let view = view as? UITableViewHeaderFooterView {
+            view.backgroundView?.alpha = 0.7
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
