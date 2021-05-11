@@ -41,6 +41,21 @@ class FriendsTableViewController: UITableViewController {
                 UIImage(named: "cat1")!,
                 UIImage(named: "cat2")!,
                 UIImage(named: "cat3")!,
+                UIImage(named: "cat1")!,
+                UIImage(named: "cat2")!,
+                UIImage(named: "cat3")!,
+                UIImage(named: "cat1")!,
+                UIImage(named: "cat2")!,
+                UIImage(named: "cat3")!,
+                UIImage(named: "cat1")!,
+                UIImage(named: "cat2")!,
+                UIImage(named: "cat3")!,
+                UIImage(named: "cat1")!,
+                UIImage(named: "cat2")!,
+                UIImage(named: "cat3")!,
+                UIImage(named: "cat1")!,
+                UIImage(named: "cat2")!,
+                UIImage(named: "cat3")!,
             ]),
             User(name: "Ася", age: 10, avatar: UIImage(named: "cat1")!, photos: [
                 UIImage(named: "cat1")!,
@@ -182,7 +197,10 @@ class FriendsTableViewController: UITableViewController {
                 let friendNum = friendCell.tag
                 let friend = friends[friendNum]
                 
-                photosViewController.photos = friend.photos
+                photosViewController.photos = []
+                for i in 0..<friend.photos.count {
+                    photosViewController.photos.append((friend.photos[i], 0))
+                }
             }
         }
     }

@@ -9,14 +9,21 @@ import UIKit
 
 class GroupsTableViewController: UITableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var groups = [
         Group(name: "Кошачья мята", image: UIImage(named: "group1")!),
         Group(name: "Молочная кухня", image: UIImage(named: "group2")!),
         Group(name: "Стоп-Пёс!", image: UIImage(named: "group3")!)
     ]
+    
+    var filteredGroups: [Group] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+        filteredGroups = groups
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,6 +34,7 @@ class GroupsTableViewController: UITableViewController {
 
     @IBAction func addButtonAction(_ sender: Any) {
         groups.append(Group(name: "Кошки", image: UIImage(named: "cat5")!))
+        filterGroups(searchText: searchBar.text ?? "")
         tableView.reloadData()
     }
     
@@ -36,6 +44,7 @@ class GroupsTableViewController: UITableViewController {
             
             if let indexPath = groupsSearchController.tableView.indexPathForSelectedRow {
                 groups.append(groupsSearchController.groups[indexPath.row])
+                filterGroups(searchText: searchBar.text ?? "")
                 tableView.reloadData()
             }
 
@@ -51,14 +60,14 @@ class GroupsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return filteredGroups.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "group", for: indexPath)
 
         if let cell = cell as? GroupTableViewCell {
-            let group = groups[indexPath.row]
+            let group = filteredGroups[indexPath.row]
             cell.avatarView.imageView.image = group.image
             cell.nameLabel.text = group.name
         }
@@ -108,5 +117,23 @@ class GroupsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func filterGroups(searchText: String) {
+        filteredGroups = groups
+        if searchText.trimmingCharacters(in: [" "]).count > 0 {
+            filteredGroups = filteredGroups.filter { group in
+                group.name.lowercased().contains(searchText.trimmingCharacters(in: [" "]).lowercased())
+            }
+        }
+    }
 
+}
+
+extension GroupsTableViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterGroups(searchText: searchText)
+        tableView.reloadData()
+    }
+    
 }

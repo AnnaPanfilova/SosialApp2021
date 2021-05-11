@@ -11,6 +11,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     
+    var likesChanged: ((Int) -> Void)?
+    
     var likes = 0 {
         didSet {
             likeButton.setTitle(String(likes), for: .normal)
@@ -36,6 +38,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
             likes -= 1
         }
     
+        likesChanged?(likes)
     }
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
