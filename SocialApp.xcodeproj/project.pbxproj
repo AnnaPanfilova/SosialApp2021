@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478A2F2535D41B00709F5E /* CustomAvatar.swift */; };
+		9566936C264C659000311D41 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936B264C659000311D41 /* News.swift */; };
+		9566936E264C698300311D41 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936D264C698300311D41 /* NewsTableViewCell.swift */; };
+		95669370264C6FD600311D41 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936F264C6FD600311D41 /* NewsTableViewController.swift */; };
 		957C9FF82531BEBC00B68AAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957C9FF72531BEBC00B68AAF /* User.swift */; };
 		957C9FFB2531BECB00B68AAF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957C9FFA2531BECB00B68AAF /* Group.swift */; };
 		957C9FFE2531BF9C00B68AAF /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		95478A2F2535D41B00709F5E /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
+		9566936B264C659000311D41 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		9566936D264C698300311D41 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		9566936F264C6FD600311D41 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		957C9FF72531BEBC00B68AAF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		957C9FFA2531BECB00B68AAF /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 			children = (
 				957C9FF72531BEBC00B68AAF /* User.swift */,
 				957C9FFA2531BECB00B68AAF /* Group.swift */,
+				9566936B264C659000311D41 /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,12 +103,14 @@
 				95D1ADD225238B6500464727 /* Info.plist */,
 				95CFB3D62523C9B700A065C7 /* LoginFormViewController.swift */,
 				957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */,
+				9566936F264C6FD600311D41 /* NewsTableViewController.swift */,
 				957CA0002531C04A00B68AAF /* GroupsTableViewController.swift */,
 				957CA0032531C06A00B68AAF /* PhotosCollectionViewController.swift */,
 				957CA00A2531C5C400B68AAF /* FriendTableViewCell.swift */,
 				957CA00E2531C97300B68AAF /* GroupTableViewCell.swift */,
 				957CA0112531C9EB00B68AAF /* GroupSearchTableViewCell.swift */,
 				957CA0142531CB0600B68AAF /* PhotoCollectionViewCell.swift */,
+				9566936D264C698300311D41 /* NewsTableViewCell.swift */,
 				957CA0172531CEBB00B68AAF /* GroupsSerachTableViewController.swift */,
 				95478A2F2535D41B00709F5E /* CustomAvatar.swift */,
 			);
@@ -181,6 +190,7 @@
 				957CA0182531CEBB00B68AAF /* GroupsSerachTableViewController.swift in Sources */,
 				957CA00B2531C5C400B68AAF /* FriendTableViewCell.swift in Sources */,
 				957C9FF82531BEBC00B68AAF /* User.swift in Sources */,
+				9566936C264C659000311D41 /* News.swift in Sources */,
 				95CFB3D72523C9B700A065C7 /* LoginFormViewController.swift in Sources */,
 				957CA0122531C9EB00B68AAF /* GroupSearchTableViewCell.swift in Sources */,
 				957C9FFE2531BF9C00B68AAF /* FriendsTableViewController.swift in Sources */,
@@ -190,8 +200,10 @@
 				957C9FFB2531BECB00B68AAF /* Group.swift in Sources */,
 				95D1ADC725238B6200464727 /* SceneDelegate.swift in Sources */,
 				957CA0042531C06A00B68AAF /* PhotosCollectionViewController.swift in Sources */,
+				9566936E264C698300311D41 /* NewsTableViewCell.swift in Sources */,
 				957CA00F2531C97400B68AAF /* GroupTableViewCell.swift in Sources */,
 				95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */,
+				95669370264C6FD600311D41 /* NewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
