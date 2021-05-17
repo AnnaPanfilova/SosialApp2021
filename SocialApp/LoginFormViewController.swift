@@ -13,6 +13,11 @@ class LoginFormViewController: UIViewController {
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var circle1View: CircleView!
+    @IBOutlet weak var circle2View: CircleView!
+    @IBOutlet weak var circle3View: CircleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +41,7 @@ class LoginFormViewController: UIViewController {
                 if success {
                     DispatchQueue.main.async {
                         print("успешная авторизация")
-                        self.performSegue(withIdentifier: "goNext", sender: self)
+                        self.animateAndLogin()
                     }
                 } else {
                     guard let error = error else { return }
@@ -47,23 +52,16 @@ class LoginFormViewController: UIViewController {
     }
     
     @IBAction func loginButtonPress(_ sender: Any) {
-        // Получаем текст логина
-        let login = loginInput.text!
-        // Получаем текст-пароль
-        let password = passwordInput.text!
-        
-        // Проверяем, верны ли они
-        if login == "admin" && password == "123456" {
-            print("успешная авторизация")
-            performSegue(withIdentifier: "goNext", sender: self)
+        if tryLogin() {
+            animateAndLogin()
         } else {
             print("неуспешная авторизация")
         }
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return tryLogin()
-    }
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        return tryLogin()
+//    }
     
     func tryLogin() -> Bool {
         let checkResult = checkUserData()
@@ -139,6 +137,34 @@ class LoginFormViewController: UIViewController {
         self.scrollView?.endEditing(true)
     }
     
+    func animateAndLogin() {
+        UIView.animate(withDuration: 0.3) {
+            self.loginButton.alpha = 0
+        } completion: { _ in
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat, .autoreverse]) {
+                self.circle1View.alpha = 1
+            } completion: { _ in
+                //
+            }
+            UIView.animate(withDuration: 0.3, delay: 0.1, options: [.repeat, .autoreverse]) {
+                self.circle2View.alpha = 1
+            } completion: { _ in
+                //
+            }
+            UIView.animate(withDuration: 0.3, delay: 0.2, options: [.repeat, .autoreverse]) {
+                self.circle3View.alpha = 1
+            } completion: { _ in
+                //
+            }
+            
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.performSegue(withIdentifier: "goNext", sender: self)
+        }
+
+    }
     
     
 }
@@ -150,7 +176,7 @@ extension LoginFormViewController: UITextFieldDelegate {
             passwordInput.becomeFirstResponder()
         } else {
             if tryLogin() {
-                performSegue(withIdentifier: "goNext", sender: self)
+                animateAndLogin()
             }
         }
         

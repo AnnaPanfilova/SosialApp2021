@@ -31,14 +31,19 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBAction func likeButtonAction(_ sender: Any) {
-        if likes == 0 {
-            likes += 1
-        } else {
-            likes -= 1
+    @IBAction func likeButtonAction(_ sender: UIButton) {
+        
+        UIView.animateKeyframes(withDuration: 0.15, delay: 0, options: [.autoreverse]) {
+            self.likeButton.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        } completion: {_ in
+            if self.likes == 0 {
+                self.likes += 1
+            } else {
+                self.likes -= 1
+            }
+            self.likesChanged?(self.likes)
         }
-    
-        likesChanged?(likes)
+        
     }
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
