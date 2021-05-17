@@ -75,6 +75,61 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-nR-7oy">
+                                        <rect key="frame" x="137" y="60" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="QFB-7e-xm1"/>
+                                            <constraint firstAttribute="height" constant="140" id="UIO-Pg-g0z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7J-Yc-TNn" customClass="CircleView" customModule="SocialApp" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="484" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CiO-AP-dli"/>
+                                            <constraint firstAttribute="width" constant="30" id="WCc-JN-d7q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53a-Ay-amn" customClass="CircleView" customModule="SocialApp" customModuleProvider="target">
+                                        <rect key="frame" x="232" y="484" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OBs-J2-EDJ"/>
+                                            <constraint firstAttribute="width" constant="30" id="Whc-ys-wkd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssx-nL-XQl" customClass="CircleView" customModule="SocialApp" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="484" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="nuk-bh-ZBB"/>
+                                            <constraint firstAttribute="height" constant="30" id="zTi-Fp-WAi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-Em-5e0">
                                         <rect key="frame" x="107" y="484" width="200" height="30"/>
                                         <constraints>
@@ -85,32 +140,31 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="FlO-ud-GKU" kind="presentation" identifier="goNext" modalPresentationStyle="fullScreen" id="b8k-oM-XK8"/>
+                                            <action selector="loginButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8N-Na-UP3"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-nR-7oy">
-                                        <rect key="frame" x="137" y="60" width="140" height="140"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="QFB-7e-xm1"/>
-                                            <constraint firstAttribute="height" constant="140" id="UIO-Pg-g0z"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4bT-Ea-F3s" firstAttribute="width" secondItem="fVa-u7-Ghv" secondAttribute="width" id="0Kk-EP-so9"/>
+                                    <constraint firstItem="ssx-nL-XQl" firstAttribute="leading" secondItem="m7J-Yc-TNn" secondAttribute="trailing" constant="10" id="0nx-R2-DyB"/>
                                     <constraint firstItem="jLf-nR-7oy" firstAttribute="centerX" secondItem="7od-m0-MOV" secondAttribute="centerX" id="59C-t3-ndG"/>
                                     <constraint firstItem="fVa-u7-Ghv" firstAttribute="centerX" secondItem="7od-m0-MOV" secondAttribute="centerX" id="6Ik-ri-ljz"/>
                                     <constraint firstAttribute="bottom" secondItem="aMu-Em-5e0" secondAttribute="bottom" constant="20" id="7md-6E-NIl"/>
+                                    <constraint firstItem="m7J-Yc-TNn" firstAttribute="centerY" secondItem="ssx-nL-XQl" secondAttribute="centerY" id="97x-zZ-hQU"/>
+                                    <constraint firstItem="ssx-nL-XQl" firstAttribute="centerX" secondItem="aMu-Em-5e0" secondAttribute="centerX" id="9q1-9h-6Rq"/>
                                     <constraint firstItem="fVa-u7-Ghv" firstAttribute="top" secondItem="65B-2g-f3a" secondAttribute="bottom" constant="8" symbolic="YES" id="D1x-ZV-GcK"/>
                                     <constraint firstItem="4bT-Ea-F3s" firstAttribute="centerX" secondItem="7od-m0-MOV" secondAttribute="centerX" id="Dad-1S-z2q"/>
                                     <constraint firstItem="fVa-u7-Ghv" firstAttribute="width" secondItem="7od-m0-MOV" secondAttribute="width" multiplier="2:3" id="GGj-hn-wyk"/>
                                     <constraint firstItem="aMu-Em-5e0" firstAttribute="top" secondItem="4bT-Ea-F3s" secondAttribute="bottom" constant="68" id="JLV-QL-vQw"/>
+                                    <constraint firstItem="53a-Ay-amn" firstAttribute="centerY" secondItem="ssx-nL-XQl" secondAttribute="centerY" id="JNb-cY-y8p"/>
                                     <constraint firstItem="jLf-nR-7oy" firstAttribute="top" secondItem="7od-m0-MOV" secondAttribute="top" priority="250" constant="60" id="Ljv-0m-IJy"/>
                                     <constraint firstItem="65B-2g-f3a" firstAttribute="centerX" secondItem="7od-m0-MOV" secondAttribute="centerX" id="M72-pN-fHS"/>
                                     <constraint firstItem="aMu-Em-5e0" firstAttribute="centerX" secondItem="7od-m0-MOV" secondAttribute="centerX" id="QhR-G7-wcC"/>
                                     <constraint firstAttribute="trailing" secondItem="jLf-nR-7oy" secondAttribute="trailing" id="UzG-Db-Ulr"/>
+                                    <constraint firstItem="ssx-nL-XQl" firstAttribute="centerY" secondItem="aMu-Em-5e0" secondAttribute="centerY" id="V2r-Mb-2Gz"/>
                                     <constraint firstItem="4bT-Ea-F3s" firstAttribute="top" secondItem="hdV-Dg-1An" secondAttribute="bottom" constant="8" symbolic="YES" id="WyJ-Qh-IDT"/>
+                                    <constraint firstItem="53a-Ay-amn" firstAttribute="leading" secondItem="ssx-nL-XQl" secondAttribute="trailing" constant="10" id="q0K-t6-qy2"/>
                                     <constraint firstItem="65B-2g-f3a" firstAttribute="top" secondItem="jLf-nR-7oy" secondAttribute="bottom" priority="250" constant="80" id="qSB-hl-wK3"/>
                                     <constraint firstItem="hdV-Dg-1An" firstAttribute="top" secondItem="fVa-u7-Ghv" secondAttribute="bottom" constant="10" id="ri1-w2-YAb"/>
                                     <constraint firstItem="hdV-Dg-1An" firstAttribute="centerX" secondItem="7od-m0-MOV" secondAttribute="centerX" id="sPK-qb-5QJ"/>
@@ -129,9 +183,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circle1View" destination="m7J-Yc-TNn" id="sdI-4I-QAM"/>
+                        <outlet property="circle2View" destination="ssx-nL-XQl" id="vG3-dl-re7"/>
+                        <outlet property="circle3View" destination="53a-Ay-amn" id="WJE-nG-WbW"/>
+                        <outlet property="loginButton" destination="aMu-Em-5e0" id="zPj-2t-ahS"/>
                         <outlet property="loginInput" destination="fVa-u7-Ghv" id="e0h-rw-MWw"/>
                         <outlet property="passwordInput" destination="4bT-Ea-F3s" id="V16-wn-VTD"/>
                         <outlet property="scrollView" destination="7od-m0-MOV" id="wdz-vE-OyU"/>
+                        <segue destination="FlO-ud-GKU" kind="showDetail" identifier="goNext" id="1AF-fi-W3c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -143,7 +202,7 @@
             <objects>
                 <tableViewController id="gBr-xa-S4h" customClass="FriendsTableViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qHM-bB-j5m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -168,7 +227,7 @@
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0H-SR-8M4" customClass="CustomAvatar" customModule="SocialApp" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="70" height="70.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="8L0-dB-1ly"/>
                                                 <constraint firstAttribute="width" constant="70" id="aL8-e8-1Ri"/>
@@ -209,7 +268,7 @@
             <objects>
                 <tableViewController id="Yyh-gJ-0He" customClass="GroupsTableViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zhk-iW-agO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="Gu4-DN-1YI">
@@ -233,7 +292,7 @@
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="reb-iI-2Po" customClass="CustomAvatar" customModule="SocialApp" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="70" height="70.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="KKf-nW-CD7"/>
                                                 <constraint firstAttribute="height" constant="70" id="qXh-VF-pIg"/>
@@ -279,7 +338,7 @@
             <objects>
                 <tableViewController id="97Y-6g-qJM" customClass="GroupsSerachTableViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wLh-CE-rp4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -336,7 +395,7 @@
             <objects>
                 <collectionViewController id="Ab0-2s-gY0" customClass="PhotosCollectionViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oj4-H9-0Lw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DZz-6E-Trl">
@@ -401,7 +460,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="tN1-rE-nkK">
             <objects>
-                <tabBarController id="FlO-ud-GKU" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="FlO-ud-GKU" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gbR-aa-ib2"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E0v-I9-4r4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -425,7 +484,7 @@
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.fill" catalog="system" id="AfT-EZ-upF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cyg-E3-SsU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -444,7 +503,7 @@
                     <tabBarItem key="tabBarItem" title="Группы" image="person.2.fill" catalog="system" id="aLj-KH-cLV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XkI-3F-WKk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -459,10 +518,9 @@
         <!--News Table View Controller-->
         <scene sceneID="NFM-t6-H0P">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vUd-Lq-wR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="i1d-mr-fJQ" customClass="NewsTableViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jK9-Cz-lBn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -604,6 +662,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="G1r-9r-F1R"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUd-Lq-wR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2964" y="1175"/>
         </scene>
@@ -614,7 +673,7 @@
                     <tabBarItem key="tabBarItem" title="Новости" image="newspaper.fill" catalog="system" id="e3b-qs-MTd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C0y-1d-VvV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953CCD0426530369007691A8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCD0326530369007691A8 /* CircleView.swift */; };
 		95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478A2F2535D41B00709F5E /* CustomAvatar.swift */; };
 		9566936C264C659000311D41 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936B264C659000311D41 /* News.swift */; };
 		9566936E264C698300311D41 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936D264C698300311D41 /* NewsTableViewCell.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		953CCD0326530369007691A8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		95478A2F2535D41B00709F5E /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
 		9566936B264C659000311D41 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		9566936D264C698300311D41 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				957CA0142531CB0600B68AAF /* PhotoCollectionViewCell.swift */,
 				9566936D264C698300311D41 /* NewsTableViewCell.swift */,
 				957CA0172531CEBB00B68AAF /* GroupsSerachTableViewController.swift */,
+				953CCD0326530369007691A8 /* CircleView.swift */,
 				95478A2F2535D41B00709F5E /* CustomAvatar.swift */,
 			);
 			path = SocialApp;
@@ -192,6 +195,7 @@
 				957C9FF82531BEBC00B68AAF /* User.swift in Sources */,
 				9566936C264C659000311D41 /* News.swift in Sources */,
 				95CFB3D72523C9B700A065C7 /* LoginFormViewController.swift in Sources */,
+				953CCD0426530369007691A8 /* CircleView.swift in Sources */,
 				957CA0122531C9EB00B68AAF /* GroupSearchTableViewCell.swift in Sources */,
 				957C9FFE2531BF9C00B68AAF /* FriendsTableViewController.swift in Sources */,
 				957CA0152531CB0600B68AAF /* PhotoCollectionViewCell.swift in Sources */,
