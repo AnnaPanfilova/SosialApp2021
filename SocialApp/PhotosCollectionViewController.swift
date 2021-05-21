@@ -16,6 +16,7 @@ class PhotosCollectionViewController: UICollectionViewController {
             collectionView.reloadData()
         }
     }
+    var photoNum = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +30,17 @@ class PhotosCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "photoDetailSegue" {
+            if let viewController = segue.destination as? PhotoDetailViewController {
+                viewController.photos = photos
+                viewController.photoNum = photoNum
+            }
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -75,12 +78,12 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        photoNum = indexPath.row
+        performSegue(withIdentifier: "photoDetailSegue", sender: self)
         return true
     }
-    */
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

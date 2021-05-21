@@ -200,7 +200,7 @@
         <!--Friends Table View Controller-->
         <scene sceneID="S4i-VA-HRN">
             <objects>
-                <tableViewController id="gBr-xa-S4h" customClass="FriendsTableViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="gBr-xa-S4h" customClass="FriendsTableViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qHM-bB-j5m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +393,7 @@
         <!--Photos Collection View Controller-->
         <scene sceneID="PtZ-pa-dhO">
             <objects>
-                <collectionViewController id="Ab0-2s-gY0" customClass="PhotosCollectionViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController modalPresentationStyle="fullScreen" id="Ab0-2s-gY0" customClass="PhotosCollectionViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oj4-H9-0Lw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,10 +452,51 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="wUs-Kg-96S"/>
+                    <connections>
+                        <segue destination="kUp-vw-9iR" kind="show" identifier="photoDetailSegue" id="CeN-kZ-rY4"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2r-G4-8OD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3868" y="-204"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="g5U-r4-f48">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="kUp-vw-9iR" customClass="PhotoDetailViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pdU-0y-Srs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HBE-zw-hox">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xoj-NB-uyC">
+                                <rect key="frame" x="414" y="0.0" width="414" height="842"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="psh-8N-CJs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xoj-NB-uyC" firstAttribute="top" secondItem="pdU-0y-Srs" secondAttribute="top" id="Bxc-QO-ccs"/>
+                            <constraint firstAttribute="bottom" secondItem="xoj-NB-uyC" secondAttribute="bottom" id="Hfr-Q6-2eP"/>
+                            <constraint firstItem="HBE-zw-hox" firstAttribute="leading" secondItem="pdU-0y-Srs" secondAttribute="leading" id="Hmg-YR-6PD"/>
+                            <constraint firstAttribute="bottom" secondItem="HBE-zw-hox" secondAttribute="bottom" id="N0A-3u-Rrm"/>
+                            <constraint firstItem="xoj-NB-uyC" firstAttribute="leading" secondItem="pdU-0y-Srs" secondAttribute="trailing" id="U0a-Dl-9Ki"/>
+                            <constraint firstAttribute="trailing" secondItem="HBE-zw-hox" secondAttribute="trailing" id="auJ-gX-0gT"/>
+                            <constraint firstItem="xoj-NB-uyC" firstAttribute="width" secondItem="HBE-zw-hox" secondAttribute="width" id="uaH-2O-4tN"/>
+                            <constraint firstItem="HBE-zw-hox" firstAttribute="top" secondItem="pdU-0y-Srs" secondAttribute="top" id="v5x-zC-LaD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Dl-bN-GcX"/>
+                    <connections>
+                        <outlet property="photo1ImageView" destination="HBE-zw-hox" id="qmj-pp-Fii"/>
+                        <outlet property="photo2ImageView" destination="xoj-NB-uyC" id="OHE-pe-V09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRc-ak-HRK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4720" y="-204"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tN1-rE-nkK">
@@ -480,7 +521,7 @@
         <!--Друзья-->
         <scene sceneID="bQL-ax-NSw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cB5-MA-wGs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cB5-MA-wGs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.fill" catalog="system" id="AfT-EZ-upF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cyg-E3-SsU">
@@ -499,7 +540,7 @@
         <!--Группы-->
         <scene sceneID="0Pc-sj-AT5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MYH-ba-glH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="MYH-ba-glH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="person.2.fill" catalog="system" id="aLj-KH-cLV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XkI-3F-WKk">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95184FEF2658041000DB4AA9 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */; };
 		953CCD0426530369007691A8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCD0326530369007691A8 /* CircleView.swift */; };
 		95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478A2F2535D41B00709F5E /* CustomAvatar.swift */; };
 		9566936C264C659000311D41 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936B264C659000311D41 /* News.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		953CCD0326530369007691A8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		95478A2F2535D41B00709F5E /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
 		9566936B264C659000311D41 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				95CFB3D62523C9B700A065C7 /* LoginFormViewController.swift */,
 				957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */,
 				9566936F264C6FD600311D41 /* NewsTableViewController.swift */,
+				95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */,
 				957CA0002531C04A00B68AAF /* GroupsTableViewController.swift */,
 				957CA0032531C06A00B68AAF /* PhotosCollectionViewController.swift */,
 				957CA00A2531C5C400B68AAF /* FriendTableViewCell.swift */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				957CA0182531CEBB00B68AAF /* GroupsSerachTableViewController.swift in Sources */,
+				95184FEF2658041000DB4AA9 /* PhotoDetailViewController.swift in Sources */,
 				957CA00B2531C5C400B68AAF /* FriendTableViewCell.swift in Sources */,
 				957C9FF82531BEBC00B68AAF /* User.swift in Sources */,
 				9566936C264C659000311D41 /* News.swift in Sources */,
