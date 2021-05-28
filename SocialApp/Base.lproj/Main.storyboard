@@ -521,7 +521,7 @@
         <!--Друзья-->
         <scene sceneID="bQL-ax-NSw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cB5-MA-wGs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cB5-MA-wGs" customClass="CustomNavigationController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.fill" catalog="system" id="AfT-EZ-upF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cyg-E3-SsU">
@@ -540,7 +540,7 @@
         <!--Группы-->
         <scene sceneID="0Pc-sj-AT5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="MYH-ba-glH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="MYH-ba-glH" customClass="CustomNavigationController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="person.2.fill" catalog="system" id="aLj-KH-cLV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XkI-3F-WKk">
@@ -710,7 +710,7 @@
         <!--Новости-->
         <scene sceneID="zFJ-aN-AKv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L9l-xb-egn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L9l-xb-egn" customClass="CustomNavigationController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Новости" image="newspaper.fill" catalog="system" id="e3b-qs-MTd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C0y-1d-VvV">

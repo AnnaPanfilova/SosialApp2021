@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950ECB9626614C95002450ED /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950ECB9526614C95002450ED /* CustomNavigationController.swift */; };
+		950ECB9826614D5E002450ED /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950ECB9726614D5E002450ED /* PushAnimator.swift */; };
+		950ECB9A26614F83002450ED /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950ECB9926614F83002450ED /* PopAnimator.swift */; };
+		950ECB9C2661589F002450ED /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950ECB9B2661589F002450ED /* CustomInteractiveTransition.swift */; };
 		95184FEF2658041000DB4AA9 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */; };
 		953CCD0426530369007691A8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCD0326530369007691A8 /* CircleView.swift */; };
 		95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478A2F2535D41B00709F5E /* CustomAvatar.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950ECB9526614C95002450ED /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		950ECB9726614D5E002450ED /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
+		950ECB9926614F83002450ED /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		950ECB9B2661589F002450ED /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		953CCD0326530369007691A8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		95478A2F2535D41B00709F5E /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
@@ -109,6 +117,10 @@
 				957C9FFD2531BF9C00B68AAF /* FriendsTableViewController.swift */,
 				9566936F264C6FD600311D41 /* NewsTableViewController.swift */,
 				95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */,
+				950ECB9526614C95002450ED /* CustomNavigationController.swift */,
+				950ECB9726614D5E002450ED /* PushAnimator.swift */,
+				950ECB9926614F83002450ED /* PopAnimator.swift */,
+				950ECB9B2661589F002450ED /* CustomInteractiveTransition.swift */,
 				957CA0002531C04A00B68AAF /* GroupsTableViewController.swift */,
 				957CA0032531C06A00B68AAF /* PhotosCollectionViewController.swift */,
 				957CA00A2531C5C400B68AAF /* FriendTableViewCell.swift */,
@@ -193,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950ECB9C2661589F002450ED /* CustomInteractiveTransition.swift in Sources */,
+				950ECB9626614C95002450ED /* CustomNavigationController.swift in Sources */,
 				957CA0182531CEBB00B68AAF /* GroupsSerachTableViewController.swift in Sources */,
 				95184FEF2658041000DB4AA9 /* PhotoDetailViewController.swift in Sources */,
 				957CA00B2531C5C400B68AAF /* FriendTableViewCell.swift in Sources */,
@@ -202,6 +216,8 @@
 				953CCD0426530369007691A8 /* CircleView.swift in Sources */,
 				957CA0122531C9EB00B68AAF /* GroupSearchTableViewCell.swift in Sources */,
 				957C9FFE2531BF9C00B68AAF /* FriendsTableViewController.swift in Sources */,
+				950ECB9A26614F83002450ED /* PopAnimator.swift in Sources */,
+				950ECB9826614D5E002450ED /* PushAnimator.swift in Sources */,
 				957CA0152531CB0600B68AAF /* PhotoCollectionViewCell.swift in Sources */,
 				95D1ADC525238B6200464727 /* AppDelegate.swift in Sources */,
 				957CA0012531C04A00B68AAF /* GroupsTableViewController.swift in Sources */,
