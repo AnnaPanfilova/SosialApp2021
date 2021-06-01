@@ -43,9 +43,14 @@ class GroupsTableViewController: UITableViewController {
             guard let groupsSearchController = segue.source as? GroupsSerachTableViewController else { return }
             
             if let indexPath = groupsSearchController.tableView.indexPathForSelectedRow {
-                groups.append(groupsSearchController.groups[indexPath.row])
-                filterGroups(searchText: searchBar.text ?? "")
-                tableView.reloadData()
+                let groupToAdd = groupsSearchController.groups[indexPath.row]
+                if !groups.contains(where: { group in
+                    return group.name == groupToAdd.name
+                }) {
+                    groups.append(groupToAdd)
+                    filterGroups(searchText: searchBar.text ?? "")
+                    tableView.reloadData()
+                }
             }
 
         }
