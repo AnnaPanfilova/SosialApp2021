@@ -31,7 +31,7 @@ class PhotoDetailViewController: UIViewController {
     }
     
     func swipeLeft() {
-        if photoNum == photos.count {
+        if photoNum >= photos.count - 1 {
             return
         }
         

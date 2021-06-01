@@ -10,7 +10,7 @@ import UIKit
 class NewsTableViewController: UITableViewController {
     
     var news: [News] = []
-    
+    var newsItemSelected = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +53,22 @@ class NewsTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        newsItemSelected = indexPath.row
+        performSegue(withIdentifier: "newsDetailSegue", sender: self)
+    }
+
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newsDetailSegue" {
+            if let viewController = segue.destination as? NewsDetailViewController {
+                viewController.newsItem = news[newsItemSelected]
+            }
+        }
     }
 
 }

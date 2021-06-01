@@ -678,10 +678,87 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="G1r-9r-F1R"/>
+                    <connections>
+                        <segue destination="n2I-qj-4E2" kind="show" identifier="newsDetailSegue" id="NyI-Sz-VeB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUd-Lq-wR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2964" y="1175"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="WeE-3d-i6l">
+            <objects>
+                <viewController id="n2I-qj-4E2" customClass="NewsDetailViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xwa-J0-TB1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-y5-llx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RJ0-y5-llx" secondAttribute="height" multiplier="1:1" id="jhO-LD-6df"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый год в этот раз наступит на четверть секунды позже" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjh-bl-ba6">
+                                <rect key="frame" x="20" y="434" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.12.2020 10:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9b-vU-YVO">
+                                <rect key="frame" x="20" y="475" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4E-aR-aiz">
+                                <rect key="frame" x="20" y="506" width="374" height="122"/>
+                                <string key="text">Новый год — главный календарный праздник, наступающий в момент перехода с последнего дня года в первый день следующего года. Отмечается многими народами в соответствии с принятым календарём.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yjB-TU-xdC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yjB-TU-xdC" secondAttribute="height" multiplier="1:1" id="buU-Bt-I3z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8hi-4N-DHI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yjB-TU-xdC" firstAttribute="trailing" secondItem="8hi-4N-DHI" secondAttribute="trailing" id="0jY-SR-Y4L"/>
+                            <constraint firstAttribute="trailing" secondItem="RJ0-y5-llx" secondAttribute="trailing" id="7X8-F0-x9y"/>
+                            <constraint firstItem="k4E-aR-aiz" firstAttribute="leading" secondItem="8hi-4N-DHI" secondAttribute="leading" constant="20" id="JJi-of-3oy"/>
+                            <constraint firstItem="k4E-aR-aiz" firstAttribute="top" secondItem="R9b-vU-YVO" secondAttribute="bottom" constant="10" id="KYs-5X-WAH"/>
+                            <constraint firstItem="RJ0-y5-llx" firstAttribute="top" secondItem="Xwa-J0-TB1" secondAttribute="top" id="LUl-kw-3Jx"/>
+                            <constraint firstItem="yjB-TU-xdC" firstAttribute="top" secondItem="Xwa-J0-TB1" secondAttribute="top" id="PEI-q9-TXw"/>
+                            <constraint firstItem="R9b-vU-YVO" firstAttribute="leading" secondItem="8hi-4N-DHI" secondAttribute="leading" constant="20" id="QUy-rr-jIo"/>
+                            <constraint firstItem="yjB-TU-xdC" firstAttribute="top" secondItem="Xwa-J0-TB1" secondAttribute="top" id="Xc4-qv-lnS"/>
+                            <constraint firstItem="hjh-bl-ba6" firstAttribute="top" secondItem="RJ0-y5-llx" secondAttribute="bottom" constant="20" id="ahr-FT-vja"/>
+                            <constraint firstItem="RJ0-y5-llx" firstAttribute="leading" secondItem="Xwa-J0-TB1" secondAttribute="leading" id="bDE-Xx-dGF"/>
+                            <constraint firstItem="8hi-4N-DHI" firstAttribute="trailing" secondItem="R9b-vU-YVO" secondAttribute="trailing" constant="20" id="bHU-0i-yj0"/>
+                            <constraint firstItem="8hi-4N-DHI" firstAttribute="trailing" secondItem="k4E-aR-aiz" secondAttribute="trailing" constant="20" id="smj-GC-KcJ"/>
+                            <constraint firstItem="yjB-TU-xdC" firstAttribute="leading" secondItem="8hi-4N-DHI" secondAttribute="leading" id="ti5-r2-OLq"/>
+                            <constraint firstItem="hjh-bl-ba6" firstAttribute="leading" secondItem="8hi-4N-DHI" secondAttribute="leading" constant="20" id="wiN-gX-dC1"/>
+                            <constraint firstItem="R9b-vU-YVO" firstAttribute="top" secondItem="hjh-bl-ba6" secondAttribute="bottom" id="xhP-Pq-Bt7"/>
+                            <constraint firstItem="8hi-4N-DHI" firstAttribute="trailing" secondItem="hjh-bl-ba6" secondAttribute="trailing" constant="20" id="zRW-ww-Krc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DMd-fA-w1w"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="R9b-vU-YVO" id="Kh3-Uf-GLJ"/>
+                        <outlet property="image1" destination="RJ0-y5-llx" id="15E-K2-lFe"/>
+                        <outlet property="image2" destination="yjB-TU-xdC" id="Dwz-f6-TbZ"/>
+                        <outlet property="textLabel" destination="k4E-aR-aiz" id="Rzl-wK-Bpy"/>
+                        <outlet property="titleLabel" destination="hjh-bl-ba6" id="MdS-95-rSF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLf-MM-Mbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3866.666666666667" y="1174.5535714285713"/>
         </scene>
         <!--Новости-->
         <scene sceneID="zFJ-aN-AKv">
