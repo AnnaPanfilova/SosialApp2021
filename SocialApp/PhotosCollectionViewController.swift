@@ -11,7 +11,7 @@ private let reuseIdentifier = "photo"
 
 class PhotosCollectionViewController: UICollectionViewController {
     
-    var photos: [(UIImage, Int)] = [] {
+    var photos: [Photo] = [] {
         didSet {
             collectionView.reloadData()
         }
@@ -59,10 +59,10 @@ class PhotosCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         if let cell = cell as? PhotoCollectionViewCell {
-            cell.photoImageView.image = photos[indexPath.row].0
-            cell.likes = photos[indexPath.row].1
+            cell.photoImageView.image = photos[indexPath.row].image
+            cell.likes = photos[indexPath.row].likes
             cell.likesChanged = { (likes) -> Void in
-                self.photos[indexPath.row].1 = likes
+                self.photos[indexPath.row].likes = likes
             }
         }
     
