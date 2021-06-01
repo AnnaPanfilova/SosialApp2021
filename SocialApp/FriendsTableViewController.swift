@@ -199,7 +199,7 @@ class FriendsTableViewController: UITableViewController {
                 
                 photosViewController.photos = []
                 for i in 0..<friend.photos.count {
-                    photosViewController.photos.append(Photo(image: friend.photos[i], likes: 0))
+                    photosViewController.photos.append(Photo(image: friend.photos[i], likes: 0, isLiked: false))
                 }
             }
         }

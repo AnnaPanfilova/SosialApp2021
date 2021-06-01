@@ -11,4 +11,5 @@ import UIKit
 struct Photo {
     let image: UIImage
     var likes: Int
+    var isLiked: Bool
 }

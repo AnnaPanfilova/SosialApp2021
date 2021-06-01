@@ -59,10 +59,10 @@ class PhotosCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         if let cell = cell as? PhotoCollectionViewCell {
-            cell.photoImageView.image = photos[indexPath.row].image
-            cell.likes = photos[indexPath.row].likes
-            cell.likesChanged = { (likes) -> Void in
+            cell.configure(photo: photos[indexPath.row])
+            cell.likesChanged = { (likes, isLiked) -> Void in
                 self.photos[indexPath.row].likes = likes
+                self.photos[indexPath.row].isLiked = isLiked
             }
         }
     
