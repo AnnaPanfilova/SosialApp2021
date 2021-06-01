@@ -10,9 +10,9 @@ import UIKit
 class GroupsSerachTableViewController: UITableViewController {
     
     var groups = [
-        Group(name: "Кошачья мята", image: UIImage(named: "group1")!),
-        Group(name: "Молочная кухня", image: UIImage(named: "group2")!),
-        Group(name: "Стоп-Пёс!", image: UIImage(named: "group3")!)
+        Group(name: "Кошачья мята 2", image: UIImage(named: "group1")!),
+        Group(name: "Молочная кухня 2", image: UIImage(named: "group2")!),
+        Group(name: "Стоп-Пёс 2!", image: UIImage(named: "group3")!)
     ]
 
     override func viewDidLoad() {

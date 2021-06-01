@@ -12,6 +12,8 @@
 		950ECB9A26614F83002450ED /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950ECB9926614F83002450ED /* PopAnimator.swift */; };
 		950ECB9C2661589F002450ED /* CustomInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950ECB9B2661589F002450ED /* CustomInteractiveTransition.swift */; };
 		95184FEF2658041000DB4AA9 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */; };
+		951EEFCD26666A6D0000660C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EEFCC26666A6C0000660C /* Photo.swift */; };
+		951EEFCF2666749B0000660C /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EEFCE2666749B0000660C /* NewsDetailViewController.swift */; };
 		953CCD0426530369007691A8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953CCD0326530369007691A8 /* CircleView.swift */; };
 		95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95478A2F2535D41B00709F5E /* CustomAvatar.swift */; };
 		9566936C264C659000311D41 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9566936B264C659000311D41 /* News.swift */; };
@@ -41,6 +43,8 @@
 		950ECB9926614F83002450ED /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		950ECB9B2661589F002450ED /* CustomInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractiveTransition.swift; sourceTree = "<group>"; };
 		95184FEE2658041000DB4AA9 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		951EEFCC26666A6C0000660C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		951EEFCE2666749B0000660C /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		953CCD0326530369007691A8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		95478A2F2535D41B00709F5E /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
 		9566936B264C659000311D41 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				957C9FF72531BEBC00B68AAF /* User.swift */,
+				951EEFCC26666A6C0000660C /* Photo.swift */,
 				957C9FFA2531BECB00B68AAF /* Group.swift */,
 				9566936B264C659000311D41 /* News.swift */,
 			);
@@ -110,6 +115,7 @@
 				95D1ADC425238B6200464727 /* AppDelegate.swift */,
 				95D1ADC625238B6200464727 /* SceneDelegate.swift */,
 				95D1ADCA25238B6200464727 /* Main.storyboard */,
+				951EEFCE2666749B0000660C /* NewsDetailViewController.swift */,
 				95D1ADCD25238B6500464727 /* Assets.xcassets */,
 				95D1ADCF25238B6500464727 /* LaunchScreen.storyboard */,
 				95D1ADD225238B6500464727 /* Info.plist */,
@@ -225,9 +231,11 @@
 				95D1ADC725238B6200464727 /* SceneDelegate.swift in Sources */,
 				957CA0042531C06A00B68AAF /* PhotosCollectionViewController.swift in Sources */,
 				9566936E264C698300311D41 /* NewsTableViewCell.swift in Sources */,
+				951EEFCD26666A6D0000660C /* Photo.swift in Sources */,
 				957CA00F2531C97400B68AAF /* GroupTableViewCell.swift in Sources */,
 				95478A302535D41B00709F5E /* CustomAvatar.swift in Sources */,
 				95669370264C6FD600311D41 /* NewsTableViewController.swift in Sources */,
+				951EEFCF2666749B0000660C /* NewsDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

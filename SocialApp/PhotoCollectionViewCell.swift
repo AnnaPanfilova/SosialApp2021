@@ -11,37 +11,33 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     
-    var likesChanged: ((Int) -> Void)?
+    var likesChanged: ((Int, Bool) -> Void)?
     
-    var likes = 0 {
-        didSet {
-            likeButton.setTitle(String(likes), for: .normal)
-            
-            var color = UIColor.darkGray
-            var image = UIImage(systemName: "heart")
-            
-            if likes > 0 {
-                color = UIColor.red
-                image = UIImage(systemName: "heart.fill")
-            }
-
-            likeButton.tintColor = color
-            likeButton.setTitleColor(color, for: .normal)
-            likeButton.setImage(image, for: .normal)
-        }
-    }
+    var photo: Photo?
     
     @IBAction func likeButtonAction(_ sender: UIButton) {
         
-        UIView.animateKeyframes(withDuration: 0.15, delay: 0, options: [.autoreverse]) {
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.autoreverse]) {
             self.likeButton.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         } completion: {_ in
-            if self.likes == 0 {
-                self.likes += 1
-            } else {
-                self.likes -= 1
+            guard var photo = self.photo else {
+                return
             }
-            self.likesChanged?(self.likes)
+            
+            if !photo.isLiked {
+                photo.likes += 1
+            } else {
+                photo.likes -= 1
+            }
+            photo.isLiked = !photo.isLiked
+            
+            self.photo = photo
+            
+            self.configureLikes(photo: photo)
+            
+            self.likesChanged?(photo.likes, photo.isLiked)
+            
+            self.likeButton.transform = CGAffineTransform.identity
         }
         
     }
@@ -62,6 +58,29 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         }
         
         return view
+    }
+    
+    func configure(photo: Photo) {
+        self.photo = photo
+        
+        photoImageView.image = photo.image
+        configureLikes(photo: photo)
+    }
+    
+    func configureLikes(photo: Photo) {
+        likeButton.setTitle(String(photo.likes), for: .normal)
+        
+        var color = UIColor.darkGray
+        var image = UIImage(systemName: "heart")
+        
+        if photo.isLiked {
+            color = UIColor.red
+            image = UIImage(systemName: "heart.fill")
+        }
+
+        likeButton.tintColor = color
+        likeButton.setTitleColor(color, for: .normal)
+        likeButton.setImage(image, for: .normal)
     }
     
 }

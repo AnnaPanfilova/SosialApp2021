@@ -12,14 +12,14 @@ class PhotoDetailViewController: UIViewController {
     @IBOutlet weak var photo1ImageView: UIImageView!
     @IBOutlet weak var photo2ImageView: UIImageView!
     
-    var photos: [(UIImage, Int)] = []
+    var photos: [Photo] = []
     var photoNum: Int = 0
     var animates = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        photo1ImageView.image = photos[photoNum].0
+        photo1ImageView.image = photos[photoNum].image
         
         let recognizerLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
         recognizerLeft.direction = .left
@@ -31,7 +31,7 @@ class PhotoDetailViewController: UIViewController {
     }
     
     func swipeLeft() {
-        if photoNum == photos.count {
+        if photoNum >= photos.count - 1 {
             return
         }
         
@@ -41,7 +41,7 @@ class PhotoDetailViewController: UIViewController {
         
         animates = true
         photoNum += 1
-        photo2ImageView.image = photos[photoNum].0
+        photo2ImageView.image = photos[photoNum].image
         
         UIView.animate(withDuration: 0.5) {
             self.photo1ImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -69,7 +69,7 @@ class PhotoDetailViewController: UIViewController {
         animates = true
         photoNum -= 1
         photo2ImageView.image = photo1ImageView.image
-        photo1ImageView.image = photos[photoNum].0
+        photo1ImageView.image = photos[photoNum].image
         photo1ImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         photo1ImageView.alpha = 0.5
         photo2ImageView.transform = CGAffineTransform(translationX: -view.bounds.width, y: 0)
