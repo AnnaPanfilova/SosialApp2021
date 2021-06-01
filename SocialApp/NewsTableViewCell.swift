@@ -30,10 +30,10 @@ class NewsTableViewCell: UITableViewCell {
         
         descriptionLabel.text = news.text
         
-        photo1ImageView.image = news.photos[0]
-        photo2ImageView.image = news.photos[1]
-        photo3ImageView.image = news.photos[2]
-        photo4ImageView.image = news.photos[3]
+        photo1ImageView.image = news.photos.count > 0 ? news.photos[0] : nil
+        photo2ImageView.image = news.photos.count > 1 ? news.photos[1] : nil
+        photo3ImageView.image = news.photos.count > 2 ? news.photos[2] : nil
+        photo4ImageView.image = news.photos.count > 3 ? news.photos[3] : nil
         
         likesButton.setTitle(String(news.likes), for: .normal)
         commentsButton.setTitle(String(news.comments), for: .normal)
